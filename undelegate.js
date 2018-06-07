@@ -4,7 +4,7 @@ var steem = require('steem');
 steem.api.streamTransactions('head', function(err, result) {
   let txType = result.operations[0][0]
   let txData = result.operations[0][1]
-  if(txType == 'transfer' && txData.memo.includes("Please update your delegation:") && txData.memo.includes("0.000000%20VESTS") && txData.to == "fbslo" && txData.from == 'minnowbooster') {
+  if(txType == 'transfer' && txData.memo.includes("Please update your delegation:") && txData.memo.includes("0.000000%20VESTS") && txData.to == "Your-account" && txData.from == 'minnowbooster') {
    var str = txData.memo;
    var res = str.split("=") && str.split("&");
    var delegatee123 = res[1].split("=");
