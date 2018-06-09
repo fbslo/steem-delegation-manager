@@ -23,4 +23,4 @@ node undelegate.js
 
 #### Created with :heart: for STEEM by [Steem Witness @fbslo](https://steemconnect.com/sign/account-witness-vote?witness=fbslo&approve=1)!
 <br>
-Contact: @fbslo [Steem.chat](https://steem.chat) & fbslo [Witness]#8470 [Discord](https://discordapp.com)
+Contact: @fbslo --> https://steem.chat & fbslo [Witness]#8470 --> https://discordapp.com
