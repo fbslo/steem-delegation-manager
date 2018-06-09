@@ -1,5 +1,5 @@
 var steem = require('steem'); //get steemsj --> npm install steem --save
-var cron = require('cron'); //get CronJob --> npm install --save node-cron
+var cron = require('node-cron'); //get CronJob --> npm install --save node-cron
 
 cron.schedule('* * * * *', function() { //use https://crontab.guru/ to set time to run this script.
             // * * * * * will run it every minute.
