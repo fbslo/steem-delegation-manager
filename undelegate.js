@@ -1,4 +1,8 @@
-var steem = require('steem'); //get steemsj
+var steem = require('steem'); //get steemsj --> npm install steem --save
+var cron = require('cron'); //get CronJob --> npm install --save node-cron
+
+cron.schedule('* * * * *', function() { //use https://crontab.guru/ to set time to run this script.
+            // * * * * * will run it every minute.
 
         const ACCOUNT_NAME = 'your-account-name' //change account name
         const WALLET_FILTER = 'transfer'
@@ -30,3 +34,4 @@ var steem = require('steem'); //get steemsj
         };
           });
         }
+})
