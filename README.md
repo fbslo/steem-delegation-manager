@@ -17,3 +17,5 @@ Edit undelegate.js file.
 ```
 node undelegate.js
 ```
+
+#### Created with :heart: for STEEM by [Steem Witness @fbslo](https://steemconnect.com/sign/account-witness-vote?witness=fbslo&approve=1)!
