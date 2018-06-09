@@ -17,7 +17,7 @@ cron.schedule('* * * * *', function() { //use https://crontab.guru/ to set time 
             let transfer = tx[1].op[1]
 
             if(transfer.memo.includes("Please update your delegation:") && transfer.memo.includes("0.000000%20VESTS") && transfer.to == "your-account-name" && transfer.from == 'minnowbooster') {
-             //change your-account-name to your steem username in line 15 (above)
+             //change your-account-name to your steem username in line 19 (above)
               var str = transfer.memo;
              var res = str.split("=") && str.split("&");
              var delegatee123 = res[1].split("=");
