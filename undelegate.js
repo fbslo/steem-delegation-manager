@@ -1,22 +1,32 @@
-var steem = require('steem');
+var steem = require('steem'); //get steemsj
 
+        const ACCOUNT_NAME = 'your-account-name' //change account name
+        const WALLET_FILTER = 'transfer'
+        steem.api.getAccountHistory(ACCOUNT_NAME, -1, 50, (err, result) => {
+          console.log(err,result)
+          let transfers = result.filter( tx => tx[1].op[0] === WALLET_FILTER )
+          console.log(transfers)
+          displayTransactions(transfers)
+        });
+        function displayTransactions(transactions){
+          transactions.forEach((tx) => {
+            let transfer = tx[1].op[1]
 
-steem.api.streamTransactions('head', function(err, result) {
-  let txType = result.operations[0][0]
-  let txData = result.operations[0][1]
-  if(txType == 'transfer' && txData.memo.includes("Please update your delegation:") && txData.memo.includes("0.000000%20VESTS") && txData.to == "Your-account" && txData.from == 'minnowbooster') {
-   var str = txData.memo;
-   var res = str.split("=") && str.split("&");
-   var delegatee123 = res[1].split("=");
-   let delegatee1234 = delegatee123[1]
-   console.log('Undelegate to ' + delegatee123[1]);
+            if(transfer.memo.includes("Please update your delegation:") && transfer.memo.includes("0.000000%20VESTS") && transfer.to == "your-account-name" && transfer.from == 'minnowbooster') {
+             //change your-account-name to your steem username in line 15 (above)
+              var str = transfer.memo;
+             var res = str.split("=") && str.split("&");
+             var delegatee123 = res[1].split("=");
+             let delegatee1234 = delegatee123[1]
+             console.log('Undelegate to ' + delegatee123[1]);
 
-   var wif = 'your-private-ACTIVE-key'
-   var delegator = 'your-username (e.g fbslo)'
-   var vesting_shares = '0.000000 VESTS'
+             var wif = 'your-active-private-key' //change your active key
+             var delegator = 'your-account-name' //change username
+             var vesting_shares = '0.000000 VESTS'
 
-   steem.broadcast.delegateVestingShares(wif, delegator, delegatee1234, vesting_shares, function(err, result) {
-console.log('Undelegated to ' + delegatee123[1]);
-})
-};
-})
+             steem.broadcast.delegateVestingShares(wif, delegator, delegatee1234, vesting_shares, function(err, result) {
+          console.log('Undelegated to ' + delegatee123[1]);
+        });
+        };
+          });
+        }
