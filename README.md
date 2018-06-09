@@ -12,7 +12,8 @@ npm install
 1) ***Undelegate.js***
 ##### Config:
 Edit undelegate.js file.
-1) 
+1) Line 7 & 19 & 28 : replace your-account-name witn your Steem account name (e.g. fbslo)
+2) Line 27: Replace your-active-private-key with your ACTIVE key (e.g. 5K......)
 
 
 ##### Run:
