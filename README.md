@@ -18,7 +18,7 @@ $ cd steem-delegation-manager
 $ npm install
 ```
 
-1) ***Undelegate.js***
+
 ##### Configuration:
 Edit undelegate.js file.
 
