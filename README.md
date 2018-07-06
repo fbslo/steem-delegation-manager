@@ -1,6 +1,8 @@
 # Steem Delegation Manager
 
 ### How to Install:
+
+You need node.js installed.
 ```
 npm install steem --save
 npm install --save node-cron
