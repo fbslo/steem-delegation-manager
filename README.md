@@ -2,13 +2,20 @@
 
 ### How to Install:
 
-You need node.js installed.
+You need node.js installed. If you already have Node.js and npm installed, you can skip this part.
 ```
-npm install steem --save
-npm install --save node-cron
-git clone https://github.com/fbslo/steem-delegation-manager.git
-cd steem-delegation-manager
-npm install
+$ sudo apt-get update
+$ curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
+```
+
+Install Steem.js and node-cron. Clone the project repo into the "steem-delegation-manager" directory.
+```
+$ npm install steem --save
+$ npm install --save node-cron
+$ git clone https://github.com/fbslo/steem-delegation-manager.git
+$ cd steem-delegation-manager
+$ npm install
 ```
 
 1) ***Undelegate.js***
@@ -16,9 +23,12 @@ npm install
 Edit undelegate.js file.
 
 ##### Run:
-
+Run in background with PM2.
 ```
-node undelegate.js
+$ sudo npm install pm2 -g
+$ pm2 start undelegate.js
+$ pm2 logs undelegate
+$ pm2 save
 ```
 
 #### Created with :heart: for STEEM by [Steem Witness @fbslo](https://steemconnect.com/sign/account-witness-vote?witness=fbslo&approve=1)!
