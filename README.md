@@ -19,8 +19,13 @@ $ npm install
 ```
 
 1) ***Undelegate.js***
-##### Config:
+##### Configuration:
 Edit undelegate.js file.
+
+```
+const your_account = 'account_username' //change account name
+const active_key = 'active_private_key' //change your active key
+```
 
 ##### Run:
 Run in background with PM2.
@@ -30,6 +35,8 @@ $ pm2 start undelegate.js
 $ pm2 logs undelegate
 $ pm2 save
 ```
+
+
 
 #### Created with :heart: for STEEM by [Steem Witness @fbslo](https://steemconnect.com/sign/account-witness-vote?witness=fbslo&approve=1)!
 <br>
