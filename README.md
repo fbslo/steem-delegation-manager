@@ -1,4 +1,4 @@
-# Steem Delegation Manager
+# MinnowBooster Delegation Manager
 
 ### How to Install:
 
