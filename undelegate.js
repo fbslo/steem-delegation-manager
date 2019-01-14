@@ -39,5 +39,5 @@ cron.schedule('* * * * *', function() { //use https://crontab.guru/ to set time 
         });
       };
     });
-}
+  }
 })
