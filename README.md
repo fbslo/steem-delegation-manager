@@ -15,7 +15,6 @@ $ npm install steem --save
 $ npm install --save node-cron
 $ git clone https://github.com/fbslo/steem-delegation-manager.git
 $ cd steem-delegation-manager
-$ npm install
 ```
 
 
